@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 import FaqQuestion from '../../components/FaqQuestion'
@@ -12,8 +12,14 @@ import {
 import imgBottom from '../../assets/images/bg-pattern-mobile.svg'
 import imgWoman from '../../assets/images/illustration-woman-online-mobile.svg'
 
-
 const Home:React.FC = () => {
+
+    const [click, setClick] = useState(false)
+
+    function handleClick(){
+        setClick(!click)
+    }
+
     return (
         <Container>
             <Content>
@@ -24,31 +30,7 @@ const Home:React.FC = () => {
                     <h1>FAQ</h1>
 
                     <QuestionsSection>
-                        <FaqQuestion 
-                            title="How many team members can I invite?"
-                            description="Ahhhhhhh"
-                            selected={true}
-                        />
-                        <FaqQuestion 
-                            title="What is the maximum file upload size?"
-                            description="Ahhhhhhh"
-                            selected={true}
-                        />
-                        <FaqQuestion 
-                            title="How do I reset my password?"
-                            description="Ahhhhhhh"
-                            selected={true}
-                        />
-                        <FaqQuestion 
-                            title="Can I cancel my subscription?"
-                            description="Ahhhhhhh"
-                            selected={true}
-                        />
-                        <FaqQuestion 
-                            title="Do you provide additional support?"
-                            description="Ahhhhhhh"
-                            selected={true}
-                        />
+                        <FaqQuestion />
                     </QuestionsSection>
                 </FaqSection>
             </Content>

@@ -14,10 +14,18 @@ export const Container = styled.div`
             color: #4B4C5F;
             position: relative;
             max-width: 270px;
+            cursor: pointer;
 
             img {
                 position: absolute;
                 right: -20px;
+                cursor: pointer;
+                top: 2px;
+                transition: filter 0.2s;
+
+                :hover{
+                    filter: brightness(0.72);
+                }
             }
 
             ::after{

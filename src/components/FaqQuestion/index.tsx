@@ -5,19 +5,18 @@ import {
 
 import iconArrow from '../../assets/images/icon-arrow-down.svg'
 
-interface FaqQuestionProps{
-    title: string;
-    description: string;
-    selected: boolean;
-}
+import data from '../../assets/data/faqData'
 
-
-
-const FaqQuestion:React.FC<FaqQuestionProps> = ({title, description, selected}) => {
+const FaqQuestion:React.FC = () => {
     return (
-        <Container>
-            <span>{title} <img src={iconArrow} alt="icon-arrow"/></span>
-        </Container>
+        <>
+        {data.map((item) => (
+            <Container>
+                <span>{item.title} <img src={iconArrow} alt="icon-arrow"/></span>
+            </Container>
+        ))}
+        
+        </>
     )
 }
 
