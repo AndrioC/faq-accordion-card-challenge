@@ -27,13 +27,32 @@ export const Content = styled.div`
 
       img.img-woman{
          margin-top: -108px;
+         margin-right: 40px;
       }
 
       img.img-bottom{
          margin-top: -90px;
-         margin-left: 30px;
+         margin-right: 20px;
       }
 
    }
+
+`;
+
+export const FaqSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    h1 {
+
+    }
+
+`;
+
+export const QuestionsSection = styled.div`
+    margin-top: 39px;
 
 `;
