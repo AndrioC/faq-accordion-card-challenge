@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+
+interface ContainerProps {
+    isSelected: boolean;
+    idItem: number;
+    indexItem: number;
+}
+
+export const Container = styled.div<ContainerProps>`
     
     & + div {
         margin-top: 36px;
@@ -14,17 +21,23 @@ export const Container = styled.div`
             color: #4B4C5F;
             position: relative;
             max-width: 270px;
+            font-weight: ${props => props.isSelected && (props.idItem === props.indexItem + 1) ? 'bold' : 'normal'};
             cursor: pointer;
 
-            img {
-                position: absolute;
-                right: -20px;
-                cursor: pointer;
-                top: 2px;
-                transition: filter 0.2s;
+            button {
+                border: none;
+                img {
+                    position: absolute;
+                    right: -20px;
+                    cursor: pointer;
+                    top: 2px;
+                    transition: filter 0.2s;
+                    transition: transform .3s;
+                    transform: ${props => props.isSelected && (props.idItem === props.indexItem + 1) ? 'rotate(180deg)' : 'rotate(0deg)'};
 
-                :hover{
-                    filter: brightness(0.72);
+                    :hover{
+                        filter: brightness(0.72);
+                    }
                 }
             }
 
@@ -34,10 +47,20 @@ export const Container = styled.div`
                 border-radius: 3px 3px 0 0;
                 width: 110%;
                 position: absolute;
-                top: 24px;
+                transition: top 0.2s;
+                top: ${props => props.isSelected && (props.idItem === props.indexItem + 1) ? '60' : '24'}px;
                 left: 0px;
                 background: #E8E8EA;  
             }
+        }
+
+        p {
+            display: ${props => props.isSelected && (props.idItem === props.indexItem + 1) ? 'block' : 'none'};
+            font-size: 12px;
+            color: #787887;
+            margin-top: 12px;
+            line-height: 18px;
+            margin-left: 6px;
         }
     }
 `;
