@@ -76,5 +76,10 @@ export const Container = styled.div<ContainerProps>`
                 width: 110%;
             }
         }
+
+        p {
+            font-size: 10px;
+            max-width: 220px;
+        }
     }
 `;

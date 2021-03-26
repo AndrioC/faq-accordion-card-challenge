@@ -119,7 +119,4 @@ export const FaqSection = styled.div`
 
 export const QuestionsSection = styled.div`
 
-    @media (max-width: 920px){
-        margin-top: 39px;
-    }
 `;
