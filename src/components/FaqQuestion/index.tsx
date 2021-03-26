@@ -21,6 +21,7 @@ const FaqQuestion:React.FC = () => {
         <>
         {data.map((item, index) => (
             <Container isSelected={click} idItem={selectedId} indexItem={index}>
+                
                 <span onClick={() => handleClick(item.id)}>{item.title} 
                     <button onClick={() => handleClick(item.id)}>
                         <img src={iconArrow} alt="icon-arrow"/>

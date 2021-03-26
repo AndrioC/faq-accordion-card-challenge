@@ -13,14 +13,12 @@ export const Container = styled.div<ContainerProps>`
         margin-top: 36px;
     }
 
-
-    @media (max-width: 900px){
-        span {
+    span {
             display: block;
             font-size: 13px;
             color: #4B4C5F;
             position: relative;
-            max-width: 270px;
+            max-width: 500px;
             font-weight: ${props => props.isSelected && (props.idItem === props.indexItem + 1) ? 'bold' : 'normal'};
             cursor: pointer;
 
@@ -28,7 +26,7 @@ export const Container = styled.div<ContainerProps>`
                 border: none;
                 img {
                     position: absolute;
-                    right: -20px;
+                    right: -72px;
                     cursor: pointer;
                     top: 2px;
                     transition: filter 0.2s;
@@ -45,7 +43,7 @@ export const Container = styled.div<ContainerProps>`
                 content: '';
                 height: 1px;
                 border-radius: 3px 3px 0 0;
-                width: 110%;
+                width: 132%;
                 position: absolute;
                 transition: top 0.2s;
                 top: ${props => props.isSelected && (props.idItem === props.indexItem + 1) ? '60' : '24'}px;
@@ -54,6 +52,7 @@ export const Container = styled.div<ContainerProps>`
             }
         }
 
+
         p {
             display: ${props => props.isSelected && (props.idItem === props.indexItem + 1) ? 'block' : 'none'};
             font-size: 12px;
@@ -61,6 +60,20 @@ export const Container = styled.div<ContainerProps>`
             margin-top: 12px;
             line-height: 18px;
             margin-left: 6px;
+        }
+
+    @media (max-width: 920px){
+        span {
+
+            button {
+                img {
+                    right: -20px;
+                }
+            }
+
+            ::after{
+                width: 110%;
+            }
         }
     }
 `;
