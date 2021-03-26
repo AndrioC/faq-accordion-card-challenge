@@ -55,11 +55,12 @@ export const Container = styled.div<ContainerProps>`
 
         p {
             display: ${props => props.isSelected && (props.idItem === props.indexItem + 1) ? 'block' : 'none'};
-            font-size: 12px;
+            font-size: 11px;
             color: #787887;
             margin-top: 12px;
             line-height: 18px;
             margin-left: 6px;
+            max-width: 250px;
         }
 
     @media (max-width: 920px){

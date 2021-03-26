@@ -27,7 +27,7 @@ const FaqQuestion:React.FC = () => {
                         <img src={iconArrow} alt="icon-arrow"/>
                     </button>
                 </span>
-                <p>Algo aqui</p>
+                <p>{item.description}</p>
             </Container>
         ))}
         
